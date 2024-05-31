@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
+    <script
+      src="https://kit.fontawesome.com/232c1cf261.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Invoice</title>
+  </head>
+  <body class="m-8">
+    <!-- first section -->
+    <div class="flex flex-row-reverse justify-between">
+      <div class="mb-4">
+        <h1 class="uppercase text-5xl">Invoice</h1>
+        <label class="input input-bordered flex items-center gap-2">
+          <img class="h-3" src="hash-svgrepo-com.svg" alt="" />
+          <input
+            type="text"
+            class="border-4 w-40 h-12 text-2xl"
+            placeholder=""
+          />
+        </label>
+      </div>
+      <div>
+        <div
+          class="h-20 w-32 border-4 bg-gray-200 text-gray-400 text-xs"
+          id="logo-div"
+        >
+          <i class="fa-solid fa-plus mr-1"></i>Add Your Logo
+        </div>
+      </div>
+    </div>
+    <!-- second section -->
+    <div class="lg:flex justify-between">
+      <div>
+        <input
+          type="text"
+          class="border-4 mb-4 w-full h-14"
+          placeholder="Who is this invoice from? (required)"
+          required
+        />
+        <div class="lg:flex gap-4">
+          <div>
+            <p class="my-4">Bill To</p>
+            <input
+              type="text"
+              class="border-4 h-14 w-full"
+              placeholder="Who is this invoice to? (required)"
+            />
+          </div>
+          <div>
+            <p class="my-4">Ship to</p>
+            <input
+              type="text"
+              class="border-4 h-14 w-full"
+              placeholder="(optional)"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex mt-4">
+        <div class="grid text-base lg:text-xl lg:mr-12 w-full">
+          <p>Date</p>
+          <p>Payment Terms</p>
+          <p>Due Date</p>
+          <p>PO Number</p>
+        </div>
+        <div class="grid gap-2 w-full">
+          <input type="text" class="border-4" />
+          <input type="text" class="border-4" />
+          <input type="text" class="border-4" />
+          <input type="text" class="border-4" />
+        </div>
+      </div>
+    </div>
+
+    <!-- third section -->
+    <!-- for desktop -->
+    <div class="mt-8">
+        <div class="lg:flex justify-between lg:bg-sky-950 lg:text-white p-4 rounded-lg font-bold">
+            <p>Item</p>
+            <div class="lg:flex justify-between w-1/3">
+                <div class="lg:flex gap-8">
+                    <p>Quantiy</p>
+                    <p>Rate</p>
+                </div>
+                <p>Amount</p>
+            </div>
+        </div>
+        <div class="lg:flex justify-between p-4 rounded-lg font-bold gap-4">
+            <input type="text" class="border-4 w-full h-14 mb-2" >
+            <div class="lg:flex gap-4">
+                <div class="lg:flex justify-between gap-2">
+                    <input type="text" class="border-4 h-14 w-full">
+                    <input type="text" class="border-4 h-14 w-full">   
+                </div>
+                <input type="text" class=" h-14 w-full">
+            </div>
+        </div>
+    </div>
+
+    <!-- for mobile view -->
+    <div class="flex mt-4 lg:hidden">
+        <div class="grid text-base lg:text-xl lg:mr-12 w-full gap-2">
+          <p class="bg-sky-950 rounded-lg text-white mr-3 text-center">Item</p>
+          <p class="bg-sky-950 rounded-lg text-white mr-3 text-center">Quantity</p>
+          <p class="bg-sky-950 rounded-lg text-white mr-3 text-center">Rate</p>
+          <p class="bg-sky-950 rounded-lg text-white mr-3 text-center">Amount</p>
+        </div>
+        <div class="grid gap-2 w-full">
+          <input type="text" class="border-4" />
+          <input type="text" class="border-4" />
+          <input type="text" class="border-4" />
+          <input type="text" class="border-4" />
+        </div>
+      </div>
+    </div>
+    <button class=" border-2 w-28 text-center border-cyan-400 mt-4"><i class="fa-solid fa-plus mr-1 text-cyan-400"></i>Line Item</button>
+
+    <!-- fourth section -->
+    <div class="lg:flex justify-between">
+      <div class="gap-4 lg:w-1/2">
+        <div>
+          <p class="my-4">Notes</p>
+          <input
+            type="text"
+            class="border-4 h-14 w-full"
+            placeholder="Notes - any relevent not already covered"
+          />
+        </div>
+        <div>
+          <p class="my-4">Terms</p>
+          <input
+            type="text"
+            class="border-4 h-14 w-full"
+            placeholder="Terms and conditions - late fees, payment methods, delivery schedule"
+          />
+        </div>
+      </div>
+      <div class="mt-8">
+        <div class="flex justify-between gap-8">
+          <p>Subtotal</p>
+          <p>$0.00</p>
+        </div>
+        <div>
+          <p>Tax</p>
+          <input type="text">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
